@@ -1,22 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose your players</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
+
 <body>
+    <!-- header start -->
     <header>
-        <h1>Choose your favourite players</h1>
+        <h1 class="text-center text-primary">Choose your favourite players</h1>
     </header>
+    <!-- header end -->
 
     <main>
+        <section class="d-flex">
+            <!-- player section start -->
+            <div class="container text-center mt-4">
+                <div class="row g-2">
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/player-1.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mushfikur Rahim</h5>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/player-2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Shakib Al Hasan</h5>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/player-3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Tamim Ikbal</h5>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/player-4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mustafiz</h5>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/player-5.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mortaza</h5>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/player-6.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Soumya Sarker</h5>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- player section end -->
+            <aside>
+                <div>
+                    <h2>Selected 5</h2>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
 
+                <div>
+                    <h2>Budget</h2>
+
+                    <div class="input-group">
+                        <span class="input-group-text">Per Player</span>
+                        <input type="text" aria-label="First name" class="form-control">
+                    </div>
+
+                    <button type="button" class="mt-2 btn btn-primary">Calculate</button> <br> <br>
+
+                    <p class="d-inline">Player Expenses</p>
+                    <p class="d-inline">$<span>5000</span></p> <br>
+
+                    <div class="input-group">
+                        <span class="input-group-text">Manager</span>
+                        <input type="text" aria-label="First name" class="form-control">
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-text">Coach</span>
+                        <input type="text" aria-label="First name" class="form-control">
+                    </div>
+
+                    <button type="button" class="mt-2 btn btn-primary">Calculate Total</button> <br>
+
+                    <span>Total</span>
+                    <span>$<span>1000</span></span>
+                </div>
+            </aside>
+        </section>
     </main>
 
     <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
