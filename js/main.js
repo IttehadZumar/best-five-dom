@@ -20,15 +20,21 @@ function selected(element) {
     const playerName = element.parentNode.children[0].innerText;
     nameArr.push(playerName);
 
-    document.getElementById('total-selected-players').innerText = nameArr.length;
 
-    display(nameArr);
-
+    if (nameArr.length < 6) {
+        document.getElementById('total-selected-players').innerText = nameArr.length;
+        display(nameArr);
+    }
+    element.disabled = true;
     if (nameArr.length > 5) {
         alert('5 players selected, can not add more')
     }
 }
 
+// btn-disable
+/* const btnSelect = document.getElementById('btn-select').addEventListener('keyup', function () {
+    btnSelect.setAttribute('disabled', true);
+}) */
 
 function calculateCost(elementId) {
     const cost = document.getElementById(elementId);
@@ -36,20 +42,31 @@ function calculateCost(elementId) {
     const costInt = parseInt(costStr);
     return costInt;
 }
-
 let perPlayerCostInt;
 document.getElementById('calculate').addEventListener('click', function () {
-    perPlayerCostInt = calculateCost('per-player');
 
-    document.getElementById('player-expenses').innerText = perPlayerCostInt * nameArr.length;
+    perPlayerCostInt = calculateCost('per-player');
+    
+    if (nameArr.length < 6){
+        document.getElementById('player-expenses').innerText = perPlayerCostInt * nameArr.length;
+    }
+
+    else{
+        document.getElementById('player-expenses').innerText = perPlayerCostInt * 5;
+    }
 })
 
 document.getElementById('calculate-total').addEventListener('click', function () {
     const managerCostInt = calculateCost('manager');
     const coachCostInt = calculateCost('coach');
 
+if (nameArr.length < 6){
     const total = managerCostInt + coachCostInt + perPlayerCostInt * nameArr.length;
-
     document.getElementById('total').innerText = total;
+}
+else {
+    const total = managerCostInt + coachCostInt + perPlayerCostInt * 5;
+    document.getElementById('total').innerText = total;
+}
 
 })
