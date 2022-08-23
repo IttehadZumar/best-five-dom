@@ -17,10 +17,8 @@ function display(selectedPlayers) {
 }
 
 function selected(element) {
-    // console.log(element.parentNode.children[0].innerText);
     const playerName = element.parentNode.children[0].innerText;
     nameArr.push(playerName);
-    // console.log(playerName);
 
     document.getElementById('total-selected-players').innerText = nameArr.length;
 
@@ -43,14 +41,14 @@ let perPlayerCostInt;
 document.getElementById('calculate').addEventListener('click', function () {
     perPlayerCostInt = calculateCost('per-player');
 
-    document.getElementById('player-expenses').innerText = perPlayerCostInt
+    document.getElementById('player-expenses').innerText = perPlayerCostInt * nameArr.length;
 })
 
 document.getElementById('calculate-total').addEventListener('click', function () {
     const managerCostInt = calculateCost('manager');
     const coachCostInt = calculateCost('coach');
 
-    const total = managerCostInt + coachCostInt + perPlayerCostInt;
+    const total = managerCostInt + coachCostInt + perPlayerCostInt * nameArr.length;
 
     document.getElementById('total').innerText = total;
 
