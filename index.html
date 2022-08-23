@@ -21,13 +21,13 @@
         <section class="d-flex">
             <!-- player section start -->
             <div class="container text-center mt-4">
-                <div class="row g-2">
+                <div id="btn-select" class="row g-2">
                     <div class="col-4">
                         <div class="card" style="width: 18rem;">
                             <img src="images/player-1.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Mushfikur Rahim</h5>
-                                <a href="#" class="btn btn-primary">Select</a>
+                                <a onclick="selected(this)" href="#" class="btn btn-primary">Select</a>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                             <img src="images/player-2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Shakib Al Hasan</h5>
-                                <a href="#" class="btn btn-primary">Select</a>
+                                <a onclick="selected(this)" href="#" class="btn btn-primary">Select</a>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                             <img src="images/player-3.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Tamim Ikbal</h5>
-                                <a href="#" class="btn btn-primary">Select</a>
+                                <a onclick="selected(this)" href="#" class="btn btn-primary">Select</a>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                             <img src="images/player-4.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Mustafiz</h5>
-                                <a href="#" class="btn btn-primary">Select</a>
+                                <a onclick="selected(this)" href="#" class="btn btn-primary">Select</a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                             <img src="images/player-5.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Mortaza</h5>
-                                <a href="#" class="btn btn-primary">Select</a>
+                                <a onclick="selected(this)" href="#" class="btn btn-primary">Select</a>
                             </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                             <img src="images/player-6.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Soumya Sarker</h5>
-                                <a href="#" class="btn btn-primary">Select</a>
+                                <a onclick="selected(this)" href="#" class="btn btn-primary">Select</a>
                             </div>
                         </div>
                     </div>
@@ -81,13 +81,15 @@
             <!-- player section end -->
             <aside>
                 <div>
-                    <h2>Selected 5</h2>
-                    <ol>
+                    <h2>Selected- 
+                        <span id="total-selected-players">0</span>
+                    </h2>
+                    <ol id="selected-players">
+                        <!-- <li></li>
                         <li></li>
                         <li></li>
                         <li></li>
-                        <li></li>
-                        <li></li>
+                        <li></li> -->
                     </ol>
                 </div>
 
@@ -96,28 +98,30 @@
 
                     <div class="input-group">
                         <span class="input-group-text">Per Player</span>
-                        <input type="text" aria-label="First name" class="form-control">
+                        <input id="per-player" type="text" aria-label="First name" class="form-control">
                     </div>
 
-                    <button type="button" class="mt-2 btn btn-primary">Calculate</button> <br> <br>
+                    <button id="calculate" type="button" class="mt-2 btn btn-primary">Calculate</button> <br> <br>
 
                     <p class="d-inline">Player Expenses</p>
-                    <p class="d-inline">$<span>5000</span></p> <br>
+                    <p class="d-inline">$<span id="player-expenses" >0</span></p> <br>
 
                     <div class="input-group">
                         <span class="input-group-text">Manager</span>
-                        <input type="text" aria-label="First name" class="form-control">
+                        <input id="manager" type="text" aria-label="First name" class="form-control">
                     </div>
 
                     <div class="input-group">
                         <span class="input-group-text">Coach</span>
-                        <input type="text" aria-label="First name" class="form-control">
+                        <input id="coach" type="text" aria-label="First name" class="form-control">
                     </div>
 
-                    <button type="button" class="mt-2 btn btn-primary">Calculate Total</button> <br>
+                    <button id="calculate-total" type="button" class="mt-2 btn btn-primary">Calculate Total</button> <br>
 
                     <span>Total</span>
-                    <span>$<span>1000</span></span>
+                    <span>$
+                        <span id="total">0</span>
+                    </span>
                 </div>
             </aside>
         </section>
